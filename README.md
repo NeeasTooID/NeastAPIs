@@ -13,3 +13,5 @@
 [![NeastooID](https://github.com/NeastooID.png?size=100)](https://github.com/NeastooID)
 [![HindiaFtNpc](https://github.com/HindiaFtNpc.png?size=100)](https://github.com/HindiaFtNpc)
 [![NeastooID](https://github.com/NeeasTooID.png?size=100)](https://github.com/NeeasTooID)
+[![zeeoneofficial](https://github.com/zeeoneofficial.png?size=100)](https://github.com/zeeoneofficial)
+[![Zeltoria](https://github.com/Zeltoria.png?size=100)](https://github.com/Zeltoria)

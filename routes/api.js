@@ -85,6 +85,20 @@ var randomTextNumber =
  * Liat cara nulis code yang bener
  */
 
+router.get('/cekapikey', async (req, res, next) => {
+	var apikey = req.query.apikey
+	if(!apikey) return res.json(loghandler.noapikey)
+	if(listkey.includes(apikey)){
+		res.json({
+			apikey: apikey,
+status: true,
+limit: 'unlimited'
+		})
+		} else {
+			res.json(loghandler.apikey)
+			}
+});
+
 router.get("/download/pinterest", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.q;

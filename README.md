@@ -1,6 +1,6 @@
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/NeeasTooID/Static-HTML/main/media/4118fefdd5e2696aca96b43472105478.jpg" /></>
+  <img src="https://raw.githubusercontent.com/NeeasTooID/Static-HTML/main/media/Proyek%20Baru%20212%20%5B515FF2C%5D.png" /></>
 </p>
 <h1 align="center">LinuxxApi</h1>
 - 😭 blom selesai

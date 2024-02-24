@@ -1,29 +1,47 @@
-var express = require("express"),
-	cors = require("cors"),
-	secure = require("ssl-express-www");
-const PORT = process.env.PORT || 8080 || 5000 || 3000;
-var { color } = require("./lib/color.js");
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
 
-var apirouter = require("./routes/api");
+const app = express();
+const port = 8080;
 
-var app = express();
-app.enable("trust proxy");
-app.set("json spaces", 2);
-app.use(cors());
-app.use(secure);
-app.use(express.static("public"));
+// Inisialisasi total hits
+let totalHits = 0;
 
-app.get("/", (req, res) => {
-	res.sendFile(__path + "/views/home.html");
+// Middleware untuk menyajikan file statis dari folder 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Daftar semua file di dalam folder 'router'
+const routerPath = path.join(__dirname, 'router');
+const routerFiles = fs.readdirSync(routerPath);
+
+// Gunakan router untuk masing-masing file router
+routerFiles.forEach(file => {
+    const routerName = path.basename(file, '.js');
+    const router = require(path.join(routerPath, file));
+    app.use(`/${routerName}`, (req, res, next) => {
+        totalHits++; // Tambahkan 1 ke total hit
+        next();
+    }, router);
 });
-app.get("/docs", (req, res) => {
-	res.sendFile(__path + "/views/index.html");
+
+// Middleware untuk menangani permintaan total hit
+app.get('/total-hits', (req, res) => {
+    res.json({ totalHits });
 });
 
-app.use("/api", apirouter);
-
-app.listen(PORT, () => {
-	console.log(color("Server running on port " + PORT, "green"));
+// Middleware untuk menambahkan hit baru
+app.use((req, res, next) => {
+    totalHits++; // Tambahkan 1 ke total hit
+    next();
 });
 
-module.exports = app;
+// Mengalihkan semua permintaan yang tidak cocok dengan file statis ke halaman beranda (index.html)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'error404.html'));
+});
+
+// Jalankan server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});

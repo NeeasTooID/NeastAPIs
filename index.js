@@ -11,6 +11,14 @@ let totalHits = 0;
 // Middleware untuk menyajikan file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Logging middleware
+app.use((req, res, next) => {
+    const timestamp = new Date().toISOString();
+    const userAgent = req.headers['user-agent']; // Mendapatkan informasi peramban pengguna
+    console.log(`[${timestamp}] User-Agent: ${userAgent} | ${req.method} ${req.url}`);
+    next();
+});
+
 // Daftar semua file di dalam folder 'router'
 const routerPath = path.join(__dirname, 'router');
 const routerFiles = fs.readdirSync(routerPath);

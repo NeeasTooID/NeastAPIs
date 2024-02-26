@@ -4,7 +4,7 @@ const path = require('path');
 
 // Middleware untuk menangani permintaan GET ke /donate
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/donasi', 'donate.html'));
+    res.sendFile(path.join(__dirname, '../public/Dll', 'donate.html'));
 });
 
 module.exports = router;

@@ -1,36 +1,43 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
-const request = require('request');
-const path = require('path');
+const axios = require('axios');
 
-router.get('/', (req, res) => {
-    const dataFilePath = path.join(__dirname, '../database', 'nsfw', 'ass.json');
+router.get('/', async (req, res) => {
     try {
-        const rawData = fs.readFileSync(dataFilePath);
-        const data = JSON.parse(rawData);
+        // Lakukan permintaan HTTP ke API waifu.im
+        const response = await axios.get('https://api.waifu.im/search?included_tags=ass');
 
-        // Ambil URL gambar secara acak dari data JSON
-        const randomIndex = Math.floor(Math.random() * data.length);
-        const imageUrl = data[randomIndex];
+        // Dapatkan URL gambar dari respons JSON
+        const imageUrl = response.data.images[0].url; // Misalnya, di sini saya mengambil URL gambar pertama dari respons
 
-        // Lakukan HTTP request untuk mengunduh gambar dari URL
-        const requestSettings = {
-            url: imageUrl,
-            method: 'GET',
-            encoding: null
-        };
-        request(requestSettings, function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                res.set('Content-Type', 'image/png');
-                res.send(body);
-            } else {
-                res.status(500).json({ error: 'Failed to fetch image' });
-            }
-        });
+        // Tampilkan URL gambar di web Anda
+        res.send(`
+            <html>
+                <head>
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            background-color: black; /* Set background color to black */
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: auto;
+                        }
+                        img {
+                            max-width: 100%; /* Make the image responsive */
+                            height: auto;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <img src="${imageUrl}" alt="Ass Image">
+                </body>
+            </html>
+        `);
     } catch (error) {
-        console.error('Failed to read data from JSON file:', error);
-        res.status(500).json({ error: 'Failed to load image' });
+        console.error('Failed to fetch image:', error);
+        res.status(500).json({ error: 'Failed to fetch image' });
     }
 });
 

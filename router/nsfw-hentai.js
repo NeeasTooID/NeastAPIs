@@ -5,7 +5,7 @@ const axios = require('axios');
 router.get('/', async (req, res) => {
     try {
         // Lakukan permintaan HTTP ke API waifu.im
-        const response = await axios.get('https://api.waifu.im/search?included_tags=waifu');
+        const response = await axios.get('https://api.waifu.im/search?included_tags=hentai');
 
         // Dapatkan URL gambar dari respons JSON
         const imageUrl = response.data.images[0].url; // Misalnya, di sini saya mengambil URL gambar pertama dari respons
@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
                     </style>
                 </head>
                 <body>
-                    <img src="${imageUrl}" alt="Waifu Image">
+                    <img src="${imageUrl}" alt="Hentai Image">
                 </body>
             </html>
         `);

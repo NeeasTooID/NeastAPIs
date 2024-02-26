@@ -1,0 +1,92 @@
+/* CSS for responsive and dark mode web table */
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    background-color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #777;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Table container styles */
+.table-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #444;
+    font-weight: bold;
+}
+
+/* Improved styling for accessibility and responsiveness */
+th:first-child,
+td:first-child {
+    border-left: none;
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+/* Optional hover effect for visual interest and interactivity */
+tr:hover {
+    background-color: #445;
+}
+
+/* Media query for responsive table adjustments on smaller screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+    color: #ccc;
+    background-color: #222;
+}
+
+.dark-mode th {
+    background-color: #444;
+}
+
+.dark-mode tr:hover {
+    background-color: #445;
+}

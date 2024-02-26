@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const port = 8080;
+const port = 6701;
 
 // Inisialisasi total hits
 let totalHits = 0;
@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 
 // Mengalihkan semua permintaan yang tidak cocok dengan file statis ke halaman beranda (index.html)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'error404.html'));
+    res.sendFile(path.join(__dirname, 'public/Dll', 'error404.html'));
 });
 
 // Jalankan server

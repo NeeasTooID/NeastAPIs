@@ -16,7 +16,7 @@ router.get('/:url', async (req, res) => {
             throw new Error('ID YouTube tidak ditemukan');
         }
         
-        const data = await youtubedl(`${videoId}`);
+        const data = await youtubedl(`https://youtu.be/${videoId}`);
         
         // Periksa jika video dengan resolusi '720p' tersedia
         if (!data.video['720p']) {

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@bochilteam/scraper": "*",
     "axios": "*",
     "canvas": "^2.11.2",
     "chalk": "^5.3.0",

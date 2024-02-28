@@ -1,13 +1,12 @@
 const express = require('express');
+const router = express.Router();
 const { youtubedl } = require('@bochilteam/scraper-sosmed');
 
-const app = express();
-const PORT = 3000;
-
-app.get('/:url', async (req, res) => {
+router.get('/:url', async (req, res) => {
     try {
-        const videoUrl = req.params.url;
-        const data = await youtubedl(`https://*/${videoUrl}`);
+        // Ekstrak URL YouTube dari parameter URL
+        const videoUrl = req.params.url.split('/').pop();
+        const data = await youtubedl(`https://youtu.be/${videoUrl}`);
         
         // Ambil video stream dari data
         const videoStream = await data.video['720p'].stream();
@@ -22,6 +21,4 @@ app.get('/:url', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+module.exports = router;

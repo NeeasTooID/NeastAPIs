@@ -18,19 +18,8 @@ router.get('/:url', async (req, res) => {
         
         const data = await youtubedl(`https://youtu.be/${videoId}`);
         
-        // Periksa jika video dengan resolusi '720p' tersedia
-        if (!data.video['720p']) {
-            throw new Error('Video not available in 720p resolution');
-        }
-        
-        // Ambil URL video dari data
-        const videoUrl = data.video['720p'].url;
-        
-        // Set header untuk memberitahu browser bahwa ini adalah video
-        res.setHeader('Content-Type', 'video/mp4');
-        
-        // Redirect ke URL video
-        res.redirect(videoUrl);
+        // Kirim data yang diterima dari youtubedl sebagai respons JSON
+        res.json(data);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

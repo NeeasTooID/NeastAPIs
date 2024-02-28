@@ -9,14 +9,14 @@ router.get('/', (req, res) => {
 router.get('/:url', async (req, res) => {
     try {
         // Ekstrak URL YouTube dari parameter URL
-        const videoUrl = req.params.url.split('/').pop();
+        const videoId = req.params.url.split('/').pop();
         
         // Jika URL YouTube kosong, kirim pesan kesalahan
-        if (!videoUrl) {
+        if (!videoId) {
             throw new Error('ID YouTube tidak ditemukan');
         }
         
-        const data = await youtubedl(`https://youtu.be/${videoUrl}`);
+        const data = await youtubedl(`https://youtu.be/${videoId}`);
         
         // Periksa jika video dengan resolusi '720p' tersedia
         if (!data.video['720p']) {

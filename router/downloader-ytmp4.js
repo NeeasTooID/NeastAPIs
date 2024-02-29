@@ -1,27 +1,48 @@
 const express = require('express');
 const router = express.Router();
-const { youtubedl } = require('@bochilteam/scraper-sosmed');
+const scraper = require('@bochilteam/scraper');
 
-router.get('/', (req, res) => {
-    res.status(400).json({ error: 'Silakan masukkan ID YouTube setelah /downloader-ytmp4/' });
-});
+router.get('/', async (req, res, next) => {
+    var url = req.query.url;
 
-router.get('/:url', async (req, res) => {
+    // Pengecekan URL
+    if (!url) return res.status(400).json({
+        status: false,
+        message: "URL is required."
+    });
+
+    // Pengunduhan audio dari YouTube
     try {
-        // Ekstrak URL YouTube dari parameter URL
-        const videoId = req.params.url.split('/').pop();
-        
-        // Jika URL YouTube kosong, kirim pesan kesalahan
-        if (!videoId) {
-            throw new Error('ID YouTube tidak ditemukan');
+        const {
+            id,
+            thumbnail,
+            audio: _audio,
+            title
+        } = await scraper.youtubedlv2(url);
+
+        const downloads = [];
+        for (let i in _audio) {
+            const audio = _audio[i];
+            const kin = await audio.download();
+            downloads.push({
+                quality: audio.quality,
+                size: audio.fileSize,
+                download: kin
+            });
         }
-        
-        const data = await youtubedl(`https://youtu.be/${videoId}`);
-        
-        // Kirim data yang diterima dari youtubedl sebagai respons JSON
-        res.json(data);
+
+        res.json({
+            id: id,
+            thumbnail: thumbnail,
+            title: title,
+            downloads: downloads
+        });
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        console.error(error);
+        res.status(500).json({
+            status: false,
+            message: "Internal server error."
+        });
     }
 });
 

@@ -115,24 +115,178 @@
             </button>
           </div>
         </nav>
-        <!-- Main content area -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <!-- Content rows and columns -->
-            <!-- More content -->
-          </div>
-          <!-- Footer -->
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <!-- Copyright information -->
-              <div class="bg-dark btn btn-block btn-outline-danger">
-                <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> YusupKakuu</font>
-              </div>
+<!-- Main content area -->
+<div class="main-panel">
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Row of Cards -->
+        <div class="row">
+            <!-- IP Address Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: IP Address -->
+                        <h5 class="font-weight-bold text-danger text-uppercase">IP Address</h5>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- IP Address Value -->
+                                    <h3 class="mb-0" id="ip">Waiting...</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Network -->
+                                <div class="icon icon-box-success">
+                                    <span class="mdi mdi-access-point-network icon-item"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Your IP Address -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal">Your IP Address</font>
+                    </div>
+                </div>
             </div>
-          </footer>
+            <!-- Battery Level Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: Your Battery -->
+                        <h6 class="font-weight-bold text-info text-uppercase">Your Battery</h6>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- Battery Level Icon -->
+                                    <span id="batteryLevel"></span>
+                                    <!-- Battery Percentage -->
+                                    <h3 class="mb-0" id="percentageLevel">Waiting...</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Battery Positive -->
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-battery-positive"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Percentage Your Battery -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal">Percentage Your Battery</font>
+                    </div>
+                </div>
+            </div>
+            <!-- Visitor Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: Visitor -->
+                        <h5 class="font-weight-bold text-success text-uppercase">Visitor</h5>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- Visitor Count -->
+                                    <h3 class="mb-0" id="visits">Msi Eror Bg...</h3>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Eye -->
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-eye icon-item"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Visit Web -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal">Visit Web</font>
+                    </div>
+                </div>
+            </div>
+            <!-- Date Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: Date -->
+                        <h5 class="font-weight-bold text-info text-uppercase">Date</h5>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- Date Value -->
+                                    <h4 class="mb-0" id="tanggal">Waiting...</h4>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Calendar -->
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-calendar icon-item"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Date Now -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal">Date Now</font>
+                    </div>
+                </div>
+            </div>
+            <!-- Clock Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: Clock -->
+                        <h5 class="font-weight-bold text-success text-uppercase">Clock</h5>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- Clock Value -->
+                                    <h4 class="mb-0" id="Clock">Waiting...</h4>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Clock -->
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-clock icon-item"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Ucapan -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">Ucapan</font>
+                    </div>
+                </div>
+            </div>
+            <!-- Selamat Menggunakan Card -->
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Title: Selamat Menggunakan! -->
+                        <h6 class="font-weight-bold text-info text-uppercase">Selamat Menggunakan!</h6>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex align-items-center align-self-start">
+                                    <!-- Idul Adha Value -->
+                                    <h5 class="mb-0" id="IdulAdha">Waiting...</h5>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Icon: Star -->
+                                <div class="icon icon-box-success ">
+                                    <span class="mdi mdi-star icon-item"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description: Update Terakhir 2023 -->
+                        <font face="Original Surfer" class="text-muted font-weight-normal">Update Terakhir 2023</font>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!-- Content rows and columns -->
+    <!-- More content -->
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <!-- Copyright information -->
+        <div class="bg-dark btn btn-block btn-outline-danger">
+            <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> YusupKakuu</font>
+        </div>
+    </div>
+</footer>
     <!-- Welcome alert -->
     <script>
       swal({

@@ -2,27 +2,23 @@ const express = require('express');
 const router = express.Router();
 const scraper = require('@bochilteam/scraper');
 
-router.get('/', async (req, res, next) => {
-    var url = req.query.url;
-
-    // Pengecekan URL
-    if (!url) return res.status(400).json({
-        status: false,
-        message: "URL is required."
-    });
-
-    // Pengunduhan audio dari YouTube
+router.get('/download/ytmp3', async (req, res, next) => {
     try {
-        const {
-            id,
-            thumbnail,
-            audio: _audio,
-            title
-        } = await scraper.youtubedlv2(url);
+        const url = req.query.url;
 
+        // Pengecekan URL
+        if (!url) {
+            return res.status(400).json({
+                status: false,
+                message: "URL is required."
+            });
+        }
+
+        // Pengunduhan audio dari YouTube
+        const { id, thumbnail, audio: _audio, title } = await scraper.youtubedlv2(url);
         const downloads = [];
-        for (let i in _audio) {
-            const audio = _audio[i];
+
+        for (const audio of Object.values(_audio)) {
             const kin = await audio.download();
             downloads.push({
                 quality: audio.quality,
@@ -31,6 +27,7 @@ router.get('/', async (req, res, next) => {
             });
         }
 
+        // Respons JSON dengan detail unduhan
         res.json({
             id: id,
             thumbnail: thumbnail,

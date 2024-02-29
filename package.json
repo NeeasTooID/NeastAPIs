@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@bochilteam/scraper-sosmed": "*",
+    "@bochilteam/scraper": "*",
     "axios": "*",
     "cheerio": "*",
     "canvas": "^2.11.2",

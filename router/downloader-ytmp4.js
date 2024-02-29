@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const scraper = require('@bochilteam/scraper');
 
-router.get('/download/ytmp3', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
         const url = req.query.url;
 

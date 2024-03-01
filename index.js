@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
     const timestamp = new Date().toISOString();
     const userAgent = req.headers['user-agent']; // Mendapatkan informasi peramban pengguna
-    console.log(`[${timestamp}] User-Agent: ${userAgent} | ${req.method} ${req.url}`);
+    console.log(`[${timestamp}] | ${req.url}`);
     next();
 });
 

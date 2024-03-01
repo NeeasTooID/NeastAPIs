@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LinuxxApi - NeastooID</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://telegra.ph/file/2b739c4816980d826c305.jpg">
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="LinuxxBotz - API">
+    <meta property="og:image" content="https://telegra.ph/file/c9f47d04be2662c59194d.jpg">
+    <meta property="og:site_name" content="LinuxxApi">
+    <meta name="keywords" content="REST API">
+    <meta name="author" content="YusupKakuu">
+  </head>
+  <body id="page-top" onload="getvisitor();">
+    <div class="container-scroller">
+      <!-- Sidebar navigation -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <!-- Font settings -->
+        <font face="Original Surfer">
+        <!-- Navigation links -->
+        <ul class="nav">
+          <!-- Docs section -->
+          <li class="nav-item nav-category">
+            <span class="nav-link">Docs</span>
+          </li>
+          <!-- Home link -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="donate">
+              <span class="menu-icon">
+                <i class="mdi mdi-home"></i>
+              </span>
+              <span class="menu-title">Donate</span>
+            </a>
+          </li>
+          <!-- Downloader API section -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
+              <span class="menu-icon">
+                <i class="mdi mdi-folder-multiple-image"></i>
+              </span>
+              <span class="menu-title">Downloader API</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <!-- Submenu for Downloader API -->
+            <div class="collapse" id="ui-downloader">
+              <ul class="nav flex-column sub-menu">
+                <!-- Downloader API links -->
+                <li class="nav-item"> <a class="nav-link" href="comming">Tiktok Downloader</a></li>
+                <li class="nav-item"> <a class="nav-link" href="comming">Facebook Downloader</a></li>
+                <li class="nav-item"> <a class="nav-link" href="comming">Youtube Downloader</a></li>
+                <li class="nav-item"> <a class="nav-link" href="comming">Instagram Downloader</a></li>
+                <!-- More Downloader API links -->
+              </ul>
+            </div>
+          </li>
+          <!-- Photooxy API section -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
+              <span class="menu-icon">
+                <i class="mdi mdi-xing"></i>
+              </span>
+              <span class="menu-title">Photoo API</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <!-- Submenu for Photooxy API -->
+            <div class="collapse" id="ui-photooxy">
+              <ul class="nav flex-column sub-menu">
+                <!-- Photooxy API links -->
+                <li class="nav-item"> <a class="nav-link" href="anime-kurumi">Random Kurumi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="anime-bochi">Random Bochii</a></li>
+                <li class="nav-item"> <a class="nav-link" href="anime-waifu">Random Waifu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="cosplay-boy">Cosplay Boys</a></li>
+                <li class="nav-item"> <a class="nav-link" href="cosplay-girl">Cosplay Girls</a></li>
+                <!-- More Photooxy API links -->
+              </ul>
+            </div>
+          </li>
+          <!-- More Nsfw API links -->
+<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-tools">
+          <span class="menu-icon">          	
+          <i class="mdi mdi-wrench"></i>
+          </span>
+          <span class="menu-title">Nsfw API</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-nsfw">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="nsfw-ass">Hentai Ass</a></li>
+          <li class="nav-item"> <a class="nav-link" href="nsfw-ero">Hentai Ero</a></li>
+          <li class="nav-item"> <a class="nav-link" href="nsfw-hentai">Hentaii Raandom</a></li>
+          </ul>
+          </div>
+          </li>  
+        </ul>
+        </font>
+      </nav>
+      <!-- Main content wrapper -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- Top navigation bar -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <!-- Navbar menu -->
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <!-- Toggle sidebar button -->
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <!-- Search bar (hidden on smaller screens) -->
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex ">
+                  <input type="text" class="form-control" placeholder="LinuxxMD APIs">
+                </form>
+              </li>
+            </ul>
+            <!-- Right-aligned icons -->
+            <ul class="navbar-nav navbar-nav-right">
+            <!-- Toggle sidebar button (small screens) -->
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+<!-- Main panel -->
+<div class="col-md-20 grid-margin stretch-card">
+              <div class="card">
+              <div class="card-body">
+              <img src="https://telegra.ph/file/a3fab2f435d1b16de3a86.jpg" alt="YusupKakuu" class="logo img-fluid rounded mx-auto d-block mb-4"/>
+              <h6 class="m-0 font-weight-bold text-primary">Information</h6>
+              <h6><br>
+              Rest Api Ini Free, Silahakan di pake dengan bijak. <br><br>Apikey Nya? <font color="red">Tidak Memakai Key Api!</font>
+              <br> Jika menemukan bug gk usah lapor <a href="https://wa.me/6283897390164"> Owner</a></font>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <!-- Copyright information -->
+        <div class="bg-dark btn btn-block btn-outline-danger">
+            <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> YusupKakuu | NeastooID Co</font>
+        </div>
+    </div>
+</footer>
+    <!-- Welcome alert -->
+    <script>
+      swal({
+        title: 'Welcome To Rest Api LinuxxMD',
+        text: 'Jangan Di Salah Gunakan Yaaa Sayang >///<',
+        imageUrl: 'https://telegra.ph/file/597513eb6fca5f331fb8d.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'YusupKakuu',
+        animation: true
+      })
+    </script>
+    <!-- JavaScript files -->
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/zeeone.js"></script>
+  </body>
+</html>

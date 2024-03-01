@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const chalk = require('chalk'); // Using require to import Chalk
+import chalk from 'chalk'; // Using require to import Chalk
 
 const app = express();
 const port = process.env.PORT || 8080;

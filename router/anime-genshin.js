@@ -1,10 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+const request = require('request');
 
-// Middleware untuk menangani permintaan GET
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../database/anime', 'genshin.html'));
+    // Lakukan HTTP request untuk mengunduh gambar dari URL
+    const imageUrl = "https://neastoofl.up.railway.app/random-genshin";
+    const requestSettings = {
+        url: imageUrl,
+        method: 'GET',
+        encoding: null
+    };
+
+    request(requestSettings, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            // Mengirimkan gambar sebagai respons
+            res.set('Content-Type', 'image/jpeg'); // Set jenis konten sebagai gambar JPEG
+            res.send(body);
+        } else {
+            res.status(500).json({ error: 'Gagal mengambil gambar' });
+        }
+    });
 });
 
 module.exports = router;

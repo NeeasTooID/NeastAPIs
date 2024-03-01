@@ -1,60 +1,54 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-import chalk from 'chalk'; // Using require to import Chalk
 
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Initialize total hits
+// Inisialisasi total hits
 let totalHits = 0;
 
-// Middleware to serve static files from the 'public' folder
+// Middleware untuk menyajikan file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Logging middleware with clear timestamps and user-agent information
+// Logging middleware
 app.use((req, res, next) => {
-  const timestamp = new Date().toISOString();
-  const userAgent = req.headers['user-agent']; // Get browser information
-  console.log(
-    chalk.yellow(`[${timestamp}]`) +
-      chalk.cyan(` | ${req.method}`) +
-      chalk.green(` ${req.url}`) +
-      chalk.magenta(` | user-agent: ${userAgent}`) // Log user-agent
-  );
-  next();
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] | ${req.url}`);
+    next();
 });
 
-// Get all files from the 'router' folder
+// Daftar semua file di dalam folder 'router'
 const routerPath = path.join(__dirname, 'router');
 const routerFiles = fs.readdirSync(routerPath);
 
-// Use a router object for each router file
-const router = express.Router(); // Create a global router instance
+// Gunakan router untuk masing-masing file router
 routerFiles.forEach(file => {
-  const routerName = path.basename(file, '.js');
-  // Import router module dynamically (assuming consistent structure)
-  const routerModule = require(`${routerPath}/${file}`);
-  // Mount the imported router on the appropriate path
-  app.use(`/${routerName}`, routerModule);
-  // Register an incrementing middleware inside each mounted router
-  router.use((req, res, next) => {
-    totalHits++;
-    next();
-  });
+    const routerName = path.basename(file, '.js');
+    const router = require(path.join(routerPath, file));
+    app.use(`/${routerName}`, (req, res, next) => {
+        totalHits++; // Tambahkan 1 ke total hit
+        next();
+    }, router);
 });
 
-// Middleware to handle '/total-hits' requests
+// Middleware untuk menangani permintaan total hit
 app.get('/total-hits', (req, res) => {
-  res.json({ totalHits });
+    res.json({ totalHits });
 });
 
-// Handle unmatched requests with a custom 404 page (optional)
+// Middleware untuk menambahkan hit baru
+app.use((req, res, next) => {
+    totalHits++; // Tambahkan 1 ke total hit
+    next();
+});
+
+// Mengalihkan semua permintaan yang tidak cocok dengan file statis ke halaman beranda (index.html)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/Dll', 'error404.html')); // Customize error page path if needed
+    res.sendFile(path.join(__dirname, 'public/Dll', 'error404.html'));
 });
 
-// Start the server
+// Jalankan server
 app.listen(port, () => {
-  console.log(`Server is running on ${chalk.blue(`http://localhost:${port}`)}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });

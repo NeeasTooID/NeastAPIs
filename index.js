@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const chalk = require('chalk'); // Menambahkan Chalk
+const chalk = require('chalk'); // Menggunakan require untuk memuat Chalk
 
 const app = express();
 const port = process.env.PORT || 8080;

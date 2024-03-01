@@ -4,7 +4,7 @@ const request = require('request');
 
 router.get('/', (req, res) => {
     // Lakukan HTTP request untuk mengunduh gambar dari URL
-    const imageUrl = "https://neastoofl.up.railway.app/random-genshin";
+    const imageUrl = "https://datanst.zanixon.xyz/random-genshin";
     const requestSettings = {
         url: imageUrl,
         method: 'GET',

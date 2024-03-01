@@ -20,3 +20,4 @@
 [![BOTCAHX](https://github.com/BOTCAHX.png?size=100)](https://github.com/BOTCAHX)
 [![BochilTeam](https://github.com/BochilTeam.png?size=100)](https://github.com/BochilTeam)
 [![SuportDomain](https://github.com/ZTRdiamond.png?size=100)](https://github.com/ZTRdiamond)
+[![Support](https://github.com/LinucxMD.png?size=100)](https://github.com/LinucxMD)

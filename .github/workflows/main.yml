@@ -8,6 +8,7 @@ on:
 jobs:
   updateDiscordStatus:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
     - name: Update Discord Status

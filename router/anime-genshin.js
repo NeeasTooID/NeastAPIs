@@ -4,7 +4,7 @@ const path = require('path');
 
 // Middleware untuk menangani permintaan GET ke /donate
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../database/anime/', 'genshin.html'));
+    res.sendFile(path.join(__dirname, '../database/anime', 'genshin.html'));
 });
 
 module.exports = router;

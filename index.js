@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const chalk = require('chalk'); // Menambahkan Chalk
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -15,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
     const timestamp = new Date().toISOString();
     const userAgent = req.headers['user-agent']; // Mendapatkan informasi peramban pengguna
-    console.log(`[${timestamp}] | ${req.url}`);
+    console.log(chalk.yellow(`[${timestamp}]`) + chalk.cyan(` | ${req.method}`) + chalk.green(` ${req.url}`)); // Logging dengan Chalk
     next();
 });
 
@@ -51,5 +52,5 @@ app.get('*', (req, res) => {
 
 // Jalankan server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on ${chalk.blue(`http://localhost:${port}`)}`); // Logging dengan Chalk
 });

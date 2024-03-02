@@ -7,10 +7,9 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Fungsi untuk mengirim log ke Discord webhook dengan format embed
-async function sendLogToDiscordWithEmbed(message, embed) {
+async function sendLogToDiscordWithEmbed(embed) {
   try {
     await axios.post('https://discord.com/api/webhooks/1213535326568710294/xcLuoO51NeuWv9axQt09-xwPWlCfkXv9zn9GpYkVTMGPOoIU4QSDPYV3FnKsY8sFzvAz', {
-      content: message,
       embeds: [embed] // Masukkan objek embed ke dalam array embeds
     });
     console.log('Log terkirim ke Discord webhook dengan embed');
@@ -19,28 +18,20 @@ async function sendLogToDiscordWithEmbed(message, embed) {
   }
 }
 
-// Contoh penggunaan:
-const embed = {
-  title: 'LinucxAPI',
-  description: 'Servers Logs',
-  color: 0xFF0000 // Warna dalam format heksadesimal
-};
-
-// Mengirim pesan dengan embed
-sendLogToDiscordWithEmbed('Pesan dengan embed', embed);
-
-// Inisialisasi total hits
-let totalHits = 0;
-
 // Middleware untuk menyajikan file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Logging middleware
 app.use((req, res, next) => {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] | ${req.url}`;
+    const logMessage = `[${timestamp}] | ${req.method} ${req.url}`;
+    const embed = {
+      title: 'Server Logs',
+      description: logMessage,
+      color: 0xFF0000 // Warna merah
+    };
     console.log(logMessage);
-    sendLogToDiscord(logMessage); // Kirim log ke Discord
+    sendLogToDiscordWithEmbed(embed); // Kirim log ke Discord
     next();
 });
 

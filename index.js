@@ -6,9 +6,6 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Inisialisasi total hits
-let totalHits = 0;
-
 // Fungsi untuk mengirim log ke Discord webhook dengan format embed
 async function sendLogToDiscordWithEmbed(embed) {
   try {
@@ -23,6 +20,11 @@ async function sendLogToDiscordWithEmbed(embed) {
 
 // Middleware untuk menyajikan file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Handler untuk menangani permintaan untuk 'index.html'
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/Dll', 'index.html'));
+});
 
 // Logging middleware
 app.use((req, res, next) => {
@@ -46,21 +48,7 @@ const routerFiles = fs.readdirSync(routerPath);
 routerFiles.forEach(file => {
     const routerName = path.basename(file, '.js');
     const router = require(path.join(routerPath, file));
-    app.use(`/${routerName}`, (req, res, next) => {
-        totalHits++; // Tambahkan 1 ke total hit
-        next();
-    }, router);
-});
-
-// Middleware untuk menangani permintaan total hit
-app.get('/total-hits', (req, res) => {
-    res.json({ totalHits });
-});
-
-// Middleware untuk menambahkan hit baru
-app.use((req, res, next) => {
-    totalHits++; // Tambahkan 1 ke total hit
-    next();
+    app.use(`/${routerName}`, router);
 });
 
 // Mengalihkan semua permintaan yang tidak cocok dengan file statis ke halaman beranda (index.html)

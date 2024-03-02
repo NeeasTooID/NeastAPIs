@@ -17,13 +17,13 @@ router.get(`/${routerName}`, async (req, res) => {
 
     // Mengambil URL gambar dari pin pertama
     const chosenPin = data[0];
-    const imageData = chosenPin.url;
+    const imageUrl = chosenPin.url;
 
-    // Setel tipe konten sesuai dengan format gambar
-    res.contentType('image/jpeg'); // atau sesuaikan dengan format gambar Pinterest
+    // Menyiapkan tag <img> dengan sumber gambar dari Pinterest
+    const imageTag = `<img src="${imageUrl}" alt="Pinterest Image">`;
 
-    // Kirim data gambar sebagai respons
-    res.send(imageData);
+    // Mengirimkan tag <img> sebagai respons
+    res.send(imageTag);
   } catch (error) {
     console.error('Error fetching pin image:', error);
     res.status(500).json({ error: 'Failed to load image' });

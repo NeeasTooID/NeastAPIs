@@ -9,7 +9,7 @@ const port = process.env.PORT || 8080;
 // Fungsi untuk mengirim log ke Discord webhook
 async function sendLogToDiscord(message) {
   try {
-    await axios.post('https://discord.com/api/webhooks/1213201376310722570/SjGu6A697TPF6K_icmXc1uDC1x_LTthGH47a2MkoMaBsjt5yq2sq4RsxH8jcAU0ceG_l', { content: message });
+    await axios.post('https://discord.com/api/webhooks/1213535326568710294/xcLuoO51NeuWv9axQt09-xwPWlCfkXv9zn9GpYkVTMGPOoIU4QSDPYV3FnKsY8sFzvAz', { content: message });
     console.log('Log terkirim ke Discord webhook');
   } catch (error) {
     console.error('Gagal mengirim log ke Discord webhook:', error);

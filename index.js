@@ -6,6 +6,9 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 8080;
 
+// Inisialisasi total hits
+let totalHits = 0;
+
 // Fungsi untuk mengirim log ke Discord webhook dengan format embed
 async function sendLogToDiscordWithEmbed(embed) {
   try {

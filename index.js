@@ -6,14 +6,22 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Fungsi untuk mengirim log ke Discord webhook
-async function sendLogToDiscord(message) {
-  try {
-    await axios.post('https://discord.com/api/webhooks/1213535326568710294/xcLuoO51NeuWv9axQt09-xwPWlCfkXv9zn9GpYkVTMGPOoIU4QSDPYV3FnKsY8sFzvAz', { content: message });
-    console.log('Log terkirim ke Discord webhook');
-  } catch (error) {
-    console.error('Gagal mengirim log ke Discord webhook:', error);
-  }
+// Fungsi untuk mengirim log ke Discord webhook dengan format embed
+async function sendLogToDiscord(messages) {
+    try {
+        let formattedMessages = "";
+        for (let i = 0; i < messages.length; i++) {
+            formattedMessages += `${messages[i]}\n\n`;
+            // Kirim log setiap lima baris atau saat mencapai baris terakhir
+            if ((i + 1) % 5 === 0 || (i + 1) === messages.length) {
+                await axios.post('https://discord.com/api/webhooks/1213535326568710294/xcLuoO51NeuWv9axQt09-xwPWlCfkXv9zn9GpYkVTMGPOoIU4QSDPYV3FnKsY8sFzvAz', { content: formattedMessages });
+                formattedMessages = ""; // Reset formattedMessages
+            }
+        }
+        console.log('Log terkirim ke Discord webhook');
+    } catch (error) {
+        console.error('Gagal mengirim log ke Discord webhook:', error);
+    }
 }
 
 // Inisialisasi total hits

@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const { search } = require("pinterest-dl");
 
-router.get('/pin/:pinName', async (req, res) => {
-  const pinName = req.params.pinName;
+// Menyimpan nama file sebagai nama router
+const routerName = __filename.split('/').pop().replace('.js', '');
 
+router.get(`/${routerName}`, async (req, res) => {
   try {
     // Melakukan pencarian dengan menggunakan pinterest-dl
-    const data = await search(pinName);
+    const data = await search(routerName);
 
     // Memeriksa apakah ada pin yang ditemukan
     if (!data.length) {

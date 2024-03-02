@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@bochilteam/scraper-images": "^1.0.2",
     "@bochilteam/scraper-sosmed": "^1.0.5",
     "axios": "^1.6.7",
     "canvas": "^2.11.2",

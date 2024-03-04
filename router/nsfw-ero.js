@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const sharp = require('sharp'); // Import sharp library
 
 router.get('/', async (req, res) => {
     try {
@@ -10,7 +11,12 @@ router.get('/', async (req, res) => {
         // Dapatkan URL gambar dari respons JSON
         const imageUrl = response.data.images[0].url; // Misalnya, di sini saya mengambil URL gambar pertama dari respons
 
-        // Tampilkan URL gambar di web Anda
+        // Konversi gambar menjadi format PNG
+        const imageBuffer = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+        const image = sharp(imageBuffer.data);
+        const pngBuffer = await image.png().toBuffer();
+
+        // Tampilkan gambar PNG di web Anda
         res.send(`
             <html>
                 <head>
@@ -31,7 +37,7 @@ router.get('/', async (req, res) => {
                     </style>
                 </head>
                 <body>
-                    <img src="${imageUrl}" alt="Ero Image">
+                    <img src="data:image/png;base64,${pngBuffer.toString('base64')}" alt="Hentai Image">
                 </body>
             </html>
         `);

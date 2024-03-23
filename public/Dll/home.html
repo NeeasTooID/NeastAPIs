@@ -1,222 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>LinuxxApi - NeastooID</title>
-    <!-- CSS stylesheets -->
-    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="https://telegra.ph/file/2b739c4816980d826c305.jpg">
-    <!-- SweetAlert CSS -->
-    <link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="LinuxxBotz - API">
-    <meta property="og:image" content="https://telegra.ph/file/c9f47d04be2662c59194d.jpg">
-    <meta property="og:site_name" content="LinuxxApi">
-    <meta name="author" content="YusupKakuu">
-  </head>
-  <body id="page-top" onload="getvisitor();">
-    <div class="container-scroller">
-      <!-- Sidebar navigation -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <!-- Font settings -->
-        <font face="Original Surfer">
-        <!-- Navigation links -->
-        <ul class="nav">
-          <!-- Docs section -->
-          <li class="nav-item nav-category">
-            <span class="nav-link">Docs</span>
-          </li>
-          <!-- Home link -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="donate">
-              <span class="menu-icon">
-                <i class="mdi mdi-home"></i>
-              </span>
-              <span class="menu-title">Donate</span>
-            </a>
-          </li>
-          <!-- Downloader API section -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
-              <span class="menu-icon">
-                <i class="mdi mdi-folder-multiple-image"></i>
-              </span>
-              <span class="menu-title">Downloader API</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <!-- Submenu for Downloader API -->
-            <div class="collapse" id="ui-downloader">
-              <ul class="nav flex-column sub-menu">
-                <!-- Downloader API links -->
-                <li class="nav-item"> <a class="nav-link" href="comming">Tiktok Downloader</a></li>
-                <li class="nav-item"> <a class="nav-link" href="comming">Facebook Downloader</a></li>
-                <li class="nav-item"> <a class="nav-link" href="comming">Instagram Downloader</a></li>
-                <li class="nav-item"> <a class="nav-link" href="down-ytmp3">Youtube MP3 Downloader</a></li>
-                <li class="nav-item"> <a class="nav-link" href="down-ytmp4">Youtube MP4 Downloader</a></li>
-                <!-- More Downloader API links -->
-              </ul>
-            </div>
-          </li>
-          <!-- Photooxy API section -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
-              <span class="menu-icon">
-                <i class="mdi mdi-xing"></i>
-              </span>
-              <span class="menu-title">Photoo API</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <!-- Submenu for Photooxy API -->
-            <div class="collapse" id="ui-photooxy">
-              <ul class="nav flex-column sub-menu">
-                <!-- Photooxy API links -->
-                <li class="nav-item"> <a class="nav-link" href="anime-kurumi">Random Kurumi</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-bochi">Random Bochii</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-kaguya">Random Kaguya</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-elaina">Random Elaina</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-hinata">Random Hinata</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-genshin">Random Genshin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-waifu">Random Waifu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="anime-waifuv2">Random WaifuV2</a></li>
-                <li class="nav-item"> <a class="nav-link" href="cosplay-boy">Cosplay Boys</a></li>
-                <li class="nav-item"> <a class="nav-link" href="cosplay-girl">Cosplay Girls</a></li>
-                <!-- More Photooxy API links -->
-              </ul>
-            </div>
-          </li>
-          <!-- More Search API links -->
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-search" aria-expanded="false" aria-controls="ui-fun">
-          <span class="menu-icon">
-          <i class="mdi mdi-emoticon-happy"></i>
-          </span>
-          <span class="menu-title">Search API</span>
-          <i class="menu-arrow"></i>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="RRuLL" />
+  <base href="https://tyz-api.herokuapp.com" />
+  <link href="https://i.pinimg.com/736x/4b/7e/27/4b7e27dde43758a0544fe9abf6b180b9.jpg" rel="icon" />
+  <title>ICHINOSE API</title>
+  <link href="https://indrijunanda.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://indrijunanda.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://indrijunanda.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet" />
+  <meta property="og:title" content="FREE REST API TOOLS & DOWNLOADER ONLINE " />
+  <meta property="og:description"
+    content="KYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
+  <meta property="og:image" content="https://i.pinimg.com/736x/4b/7e/27/4b7e27dde43758a0544fe9abf6b180b9.jpg" />
+  <meta property="og:url" content="index.html" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/androidstudio.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <ul class="navbar-nav sidebar bg-gray-900 accordion bg-light" id="accordionSidebar"
+      style="color: rgb(8, 247, 255);">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-gray-900"
+        style="color: rgb(7, 255, 201);">
+        <span style="color: rgb(255, 255, 255);">FREE REST API</span>
+      </a>
+      <hr class="sidebar-divider my-0" />
+      <li class="nav-item active">
+        <a class="nav-link">
+          <i class="fas fa-fw fa-code"></i>
+          <span>Documentation</span></a>
+      </li>
+      <hr class="sidebar-divider" />
+      <div class="sidebar-heading">Features</div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
+          <i class="fas fa-fw fa-arrow-down"></i>
+          <span>Downloader API</span>
+        </a>
+        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-black py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Downloader Features</h6>
+            <a class="collapse-item" href="/downloader/youtube?link=https://www.youtube.com/watch?v=YLiRgeU7fQw">Youtube Downloader</a>
+            <a class="collapse-item" href="/downloader/play?query=anjay">Play</a>
+            <a class="collapse-item" href="/downloader/tiktok?link=https://vm.tiktok.com/ZSJcLPNpe/">Tiktok Downloader</a>
+            <a class="collapse-item" href="/downloader/tiktoknowm?link=https://vm.tiktok.com/ZSJcLPNpe">Tiktok Nowatermark</a>
+            <a class="collapse-item" href="/downloader/tiktokaudio?link=https://vm.tiktok.com/ZSJcLPNpe">Tiktok Audio</a>
+            <a class="collapse-item" href="/downloader/igdl?link=https://www.instagram.com/p/CTEDAEbpE4A/?utm_source=ig_web_copy_link">Instagram Downloader</a>
+            <a class="collapse-item" href="/downloader/igStory?username=kudettech_">Instagram Story Downloader</a>
+            <a class="collapse-item" href="/downloader/fbdl?link=https://www.facebook.com/AnnaTami.chan/videos/1259337391211843">Facebook Downloader</a>
+            <a class="collapse-item" href="/downloader/twitter?link=https://twitter.com/PassengersMovie/status/821025484150423557">Twitter Downloader</a>
+            <a class="collapse-item" href="/downloader/likeedl?link=https://likee.video/@vicky_marpaung/video/7006676628722311449">Likee Downloader</a>
+            <a class="collapse-item" href="/downloader/pindl?link=https://id.pinterest.com/pin/361906520063070744">Pinterest Downloader</a>
+            <a class="collapse-item" href="/downloader/pixiv?id=94216857&ext=.jpg">Pixiv Downloader</a>
+            <a class="collapse-item" href="/downloader/sfiledl?link=http://www.solidfiles.com/v/zdpVXjvRk8yaV">Solidfiles Downloadaer</a>
+            <a class="collapse-item" href="/downloader/mediafireDl?link=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file">Mediafire Downloader</a>
+            <a class="collapse-item" href="/downloader/scdl?link=https://soundcloud.com/user-943750457/jang-ganggu-shine-of-black">Soundcloud Downloader</a>
+            <a class="collapse-item" href="/downloader/stickerpack?link=https://getstickerpack.com/stickers/pentol-7">Stickerpack Downloader</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="true"
+            aria-controls="collapseSearch">
+            <i class="fas fa-fw fa-search"></i>
+            <span>Search API</span>
           </a>
-          <div class="collapse" id="ui-search">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="image-google">Google Image</a></li>
-          <li class="nav-item"> <a class="nav-link" href="image-pin">Pinterest</a></li>
-          </ul>
-          </div>
-          </li>
-          <!-- More Games API links -->
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-game" aria-expanded="false" aria-controls="ui-anime">
-            <span class="menu-icon">
-            <i class="mdi mdi-cat"></i>
-            </span>
-            <span class="menu-title">Game API</span>
-            <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-game">
-            <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="comming">Tebak Gambar </a></li>
-            </ul>
-            </div>
-            </li>
-          <!-- More Islamic API links -->
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-islamic" aria-expanded="false" aria-controls="ui-islamic">
-          <span class="menu-icon">
-          <i class="mdi mdi-star"></i>
-          </span>
-          <span class="menu-title">Islamic API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-islamic">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link"href="comming">Tahlil</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Wirid</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Ayat Kursi</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Doa Harian</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Bacaan Shalat</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Niat Shalat</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Kisah Nabi</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Asmaul Husna</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Niat Subuh</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Nist Zuhur</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Niat Magrib</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Niat Isya</a></li>
-          <li class="nav-item"> <a class="nav-link"href="comming">Nist Ashar</a></li>
-          </ul>
-          </div>
-          </li>
-          <!-- More Nsfw API links -->
-         <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-tools">
-          <span class="menu-icon">          	
-          <i class="mdi mdi-wrench"></i>
-          </span>
-          <span class="menu-title">Nsfw API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-nsfw">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="nsfw-ass">Hentai Ass</a></li>
-          <li class="nav-item"> <a class="nav-link" href="nsfw-ero">Hentai Ero</a></li>
-          <li class="nav-item"> <a class="nav-link" href="nsfw-hentai">Hentaii Raandom</a></li>
-          </ul>
-          </div>
-          </li>  
-        </ul>
-        </font>
-      </nav>
-      <!-- Main content wrapper -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- Top navigation bar -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row">
-          <!-- Navbar menu -->
-          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-            <!-- Toggle sidebar button -->
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="mdi mdi-menu"></span>
-            </button>
-            <!-- Right-aligned icons -->
-            <ul class="navbar-nav navbar-nav-right">
-            <!-- Toggle sidebar button (small screens) -->
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-              <span class="mdi mdi-format-line-spacing"></span>
-            </button>
-          </div>
-        </nav>
-      <!-- Main panel -->
-     <div class="col-md-25 grid-margin stretch-card">
-       <div class="card">
-         <div class="card-body">
-           <img src="https://telegra.ph/file/a3fab2f435d1b16de3a86.jpg" alt="YusupKakuu" class="logo img-fluid rounded mx-auto d-block mb-4"/>
-            <h6 class="m-0 font-weight-bold text-primary">Information</h6>
-             <h6><br>
-              Rest Api Ini Free, Silahakan di pake dengan bijak. <br><br>Apikey Nya? <font color="red">Tidak Memakai Key Api!</font>
-              <br> Jika menemukan bug gk usah lapor <a href="https://wa.me/6283897390164"> Owner</a></font>
+          <div id="collapseSearch" class="collapse" aria-labelledby="headingSearch" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Search API Features</h6>
+              <a class="collapse-item" href="/search/pinterest?query=anime">Pinterest Search</a>
+              <a class="collapse-item" href="/search/pixiv?query=anime">Pixiv Search</a>
+              <a class="collapse-item" href="/search/alphacoders?query=genshin">Alphacoders Search</a>
+              <a class="collapse-item" href="/wallpaperscraft?query=dark">Wallpaperscraft Search</a>
+              <a class="collapse-item" href="/search/wallpapercave?query=genshin">Wallpapercave Search</a>
+              <a class="collapse-item" href="/search/konachan?query=azur_lane">ZeroChan Search</a>
+              <a class="collapse-item" href="/search/sticker?query=pentol">StickerPack Search</a>       
+              <a class="collapse-item" href="/search/google?query=anime">Google Search</a>
+              <a class="collapse-item" href="/search/happymod?query=coc">Happymod Search</a>  
+              <a class="collapse-item" href="/search/tiktok?query=anime">Tiktok Search</a>     
+              <a class="collapse-item" href="/search/randomtiktok">Random Tiktok</a> 
              </div>
-           </div>
+          </div>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGames" aria-expanded="true" aria-controls="collapseForm">
+            <i class="app-menu__icon fa fa-laptop"></i>
+            <span>Anime API</span>
+        </a>
+        <div id="collapseGames" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Anime Features</h6>
+            <a class="collapse-item" href="/anime/storyanime">Story Anime</a>
+            <a class="collapse-item" href="/anime/mynimekuSearch?query=mieruko">Mynimeku Search</a>
+            <a class="collapse-item" href="/anime/mynimekuDetail?link=https://www.mynimeku.com/anime/mieruko-chan">Mynimeku Details</a>
+            <a class="collapse-item" href="/anime/mynimekuDownload?link=https://www.mynimeku.com/episode/mieruko-chan-episode-01-subtitle-indonesia">Mynimeku Download</a>
          </div>
-       </div>
-     </div>
-  <!-- Footer -->
-   <footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-        <!-- Copyright information -->
-         <div class="bg-dark btn btn-block btn-outline-danger">
-            <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024-2050</span> YusupKakuu | NeastooID Co</font>
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePhotooxy"
+          aria-expanded="true" aria-controls="collapsePhotooxy">
+          <i class="fa fa-anchor" aria-hidden="true"></i>
+          <span>Photooxy</span>
+        </a>
+        <div id="collapsePhotooxy" class="collapse" aria-labelledby="headingPhotooxy" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Photooxy Features</h6>
+            <a class="collapse-item" href="/photooxy/shadow?text=Hai">shadow</a>
+            <a class="collapse-item" href="/photooxy/cup?text=Hai">cup</a>
+            <a class="collapse-item" href="/photooxy/captain_amerika?text=Hai&text_2=hai juga">captain amerika</a>
+            <a class="collapse-item" href="/photooxy/romantic?text=Hai">romantic</a>
+            <a class="collapse-item" href="/photooxy/smoke?text=Hai">smoke</a>
+            <a class="collapse-item" href="/photooxy/burn_paper?text=Hai">burn paper</a>
+            <a class="collapse-item" href="/photooxy/naruto?text=Hai">naruto</a>
+            <a class="collapse-item" href="/photooxy/love_message?text=Hai">love message</a>
+            <a class="collapse-item" href="/photooxy/tik_tok?text=Hai&text_2=hai juga">TikTok</a>
+            <a class="collapse-item" href="/photooxy/flower_heart?text=Hai">flower heart</a>
+            <a class="collapse-item" href="/photooxy/wodden_board?text=Hai">wodden board</a>
+            <a class="collapse-item" href="/photooxy/glowing_neon?text=Hai">glowing neon</a>
+          </div>
+        </div>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOthers" aria-expanded="true"
+            aria-controls="collapseOthers">
+            <i class="fas fa-fw fa-leaf"></i>
+            <span>Primbon API</span>
+          </a>
+          <div id="collapseOthers" class="collapse" aria-labelledby="headingOthers" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">primbon Features</h6>
+              <a class="collapse-item" href="/primbon/artinama?nama=arya">Artinama</a>
+              <a class="collapse-item" href="/ramalanjodoh?nama=arya&pasangan=maysha">Ramal Jodoh</a>
+            </div>
+          </div>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandom" aria-expanded="true"
+          aria-controls="collapseRandom">
+          <i class="fa fa-camera-retro" aria-hidden="true"></i>
+          <span>Random Image</span>
+        </a>
+        <div id="collapseRandom" class="collapse" aria-labelledby="headingRandom" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Random Img Features</h6>
+             <a class="collapse-item" href="/randomimg/milf">Milf</a>
+             <a class="collapse-item" href="/randomimg/waifu">Waifu</a>
+             <a class="collapse-item" href="/randomimg/husbu">Husbu</a>
+             <a class="collapse-item" href="/randomimg/loli">Loli</a>
+             <a class="collapse-item" href="/randomimg/cosplay">Cosplay</a>
+            <h6 class="collapse-header">Akaneko Features</h6>
+            <a class="collapse-item" href="/randomimg/akaneko?param=neko">neko</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=ass">ass</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=bdsm">BDSM</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=blowjob">blowjob</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=cum">cum</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=doujin">doujin</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=feet">feet</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=femdom">femdom</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=foxgirl">foxgirl</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=gifs">gifs</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=glasses">glasses</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=hentai">hentai</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=netorare">netorare</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=maid">maid</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=masturbation">masturbation</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=orgy">orgy</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=panties">panties</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=pussy">pussy</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=school">school</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=succubus">succubus</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=tentacles">tentacles</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=thighs">thighs</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=uglyBastard">uglyBastard</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=uniform">uniform</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=yuri">yuri</a>
+            <a class="collapse-item" href="/randomimg/akaneko?param=zettaiRyouiki">zettaiRyouiki</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true"
+          aria-controls="collapseAnime">
+          <i class="fas fa-fw fa-bullseye"></i>
+          <span>NSFW API</span>
+        </a>
+        <div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">NSFW API Features</h6>
+            <a class="collapse-item" href="/nsfw/doujindesuSearch?query=shota">Doujindesu Search</a>
+            <a class="collapse-item" href="/nsfw/nHentaiSearch?query=miku">Nhentai Search</a>
+            <a class="collapse-item" href="/nsfw/nHentai?code=212121">Nhentai Info</a>
+            <a class="collapse-item" href="/nsfw/nhentaipdf?code=212121">Nhentai Downloader</a>      
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGames" aria-expanded="true" aria-controls="collapseForm">
+            <i class="app-menu__icon fa fa-laptop"></i>
+            <span>Kuis & Fun API</span>
+        </a>
+        <div id="collapseGames" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+            <div class="py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Kuis Features</h6>
+            <a class="collapse-item" href="/games/tebakgambar">Tebak Gambar</a>
          </div>
-       </div>
-     </footer>
-    <!-- JavaScript files -->
-    <script src="vendors/js/vendor.bundle.base.js"></script>
-    <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
-    <script src="js/off-canvas.js"></script>
-    <script src="js/hoverable-collapse.js"></script>
-    <script src="js/misc.js"></script>
-    <script src="js/dashboard.js"></script>
-    </body>
-  </html>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCheck" aria-expanded="true"
+          aria-controls="collapseCheck">
+          <i class="fas fa-fw fa-check"></i>
+          <span>Convert API</span>
+        </a>
+        <div id="collapseCheck" class="collapse" aria-labelledby="headingCheck" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Convert API Features</h6>
+            <a class="collapse-item" href="/converter/towebp?url=https://i.ibb.co/7CM77tx/c180e14f43cf.jpg">jpg To webp</a>
+            <a class="collapse-item" href="/converter/tomp3?url=https://tinyurl.com/55e43fy3">Mp4 To mp3</a>
+          </div>
+        </div>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseother" aria-expanded="true"
+          aria-controls="collapseother">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Other API</span>
+        </a>
+        <div id="collapseother" class="collapse" aria-labelledby="headingother" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Other API Features</h6>
+            <a class="collapse-item" href="/other/nulis?text=%20aku%20sayang%20kamu%20>%20///<">Nulis Buku</a>
+            <a class="collapse-item" href="/other/ttp?text=love you <3">Text to Picture</a>
+            <a class="collapse-item" href="/other/attp?text=love you <3">Text to Gif</a>
+            <a class="collapse-item" href="/other/ssweb?link=https://tyz-api.herokuapp.com">ScreenShoot web</a>
+            <a class="collapse-item" href="/other/removebg?link=https://images-na.ssl-images-amazon.com/images/I/51vhBLpXhCL.jpg">Remove bg</a>
+            <a class="collapse-item" href="/other/merdeka">Merdeka News</a>
+            <a class="collapse-item" href="/other/meme">Meme</a>
+            <a class="collapse-item" href="/other/qrcode?text=hii">QR code</a>
+          </div>
+        </div>
+      </li>
+      <hr class="sidebar-divider" />
+      <div class="version" id="version-ruangadmin"></div>
+    </ul>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top bg-gray-900">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle"
+                  src="https://i.pinimg.com/736x/4b/7e/27/4b7e27dde43758a0544fe9abf6b180b9.jpg"
+                  style="max-width: 100px" />
+                <span class="ml-2 d-none d-lg-inline text-white small"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="container-fluid" id="container-wrapper">
+          <div id="demo" class="alert alert-dark alert-dismissible" role="alert">
+            <div id="browser_info"></div>
+            <script>
+              let arrBulan = [
+                "Januari",
+                "Februari",
+                "Maret",
+                "April",
+                "Mei",
+                "Juni",
+                "Juli",
+                "Agustus",
+                "September",
+                "Oktober",
+                "November",
+                "Desember",
+              ];
+              let txt = "";
+              txt +=
+                "<p><b>Browser CodeName</b>: " +
+                navigator.appCodeName +
+                "</p>";
+              txt += "<p><b>Browser Name</b>: " + navigator.appName + "</p>";
+              txt +=
+                "<p><b>Cookies Enabled</b>: " +
+                navigator.cookieEnabled +
+                "</p>";
+              txt += "<p><b>Browser Online</b>: " + navigator.onLine + "</p>";
+              txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
+              txt += "<p><b>User-agent</b>: " + navigator.userAgent + "</p>";
+              let text_el = document.querySelector("div#browser_info");
+              setInterval(() => {
+                var d = new Date();
+                const jam = d.getHours().toString().padStart(2, 0);
+                const menit = d.getMinutes().toString().padStart(2, 0);
+                const detik = d.getSeconds().toString().padStart(2, 0);
+                const tgl = d.getDate();
+                const bln = d.getMonth();
+                const thn = d.getFullYear();
+                const bulan = arrBulan[bln];
+                text_el.innerHTML =
+                  txt +
+                  "<b>Date</b>: " +
+                  jam +
+                  ":" +
+                  menit +
+                  ":" +
+                  detik +
+                  "~" +
+                  tgl +
+                  "-" +
+                  bulan +
+                  "-" +
+                  thn +
+                  "<br>Welcome back!";
+              }, 250);
+            </script>
+          </div>
+          <div class="row">
+<div class="col-xl-12 col-lg-12 col-md-12">
+<div class="card">
+<div class="card-header">
+<h4 class="card-title">Made with ❤️ by <a href="https://github.com/Arya-was" target="_blank">Arya</a></h4>
+</div>
+<div class="card-body text-sm-left font-weight-bold">Jangan di Bully mastah, Saya cuma gabut bikin Api monggo di pakai btw source code nya di <a href="https://github.com/Arya-was/simple-api" target="_blank">Sini</a> yak</div>
+</div>
+</div>
+</div>
+<span> <br> </span>
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  <b><a href="https://github.com/Arya-was"
+                      target="_blank">Arya</a></b>
+                </span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery/jquery.min.js"></script>
+    <script src="https://indrijunanda.github.io/RuangAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://indrijunanda.github.io/RuangAdmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://indrijunanda.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,188 +1,1039 @@
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "abf30a4d-0a5e-4700-8542-117184895b98",
+      host: "https://wchat.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
+<!--End of Tawk.to Script-->
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title> Adithya Api </title> 
+<meta property="og:image" content="https://i.ibb.co/8sTPwW2/IMG-20220402-105820.jpg" /> 
+<meta property="og:title" content="Adithya" /> <meta property="og:description" content="Ampun stah masih pemula"/> 
+<link rel="shortcut icon" href="https://i.ibb.co/8sTPwW2/IMG-20220402-105820.jpg" type="image/x-icon" />
+
+</head>
+<body>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Meta tags -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="RRuLL" />
-
-  <!-- Favicon -->
-  <link href="https://i.pinimg.com/736x/4b/7e/27/4b7e27dde43758a0544fe9abf6b180b9.jpg" rel="icon" />
-
-  <!-- Title -->
-  <title>NEASTOOID</title>
-
-  <!-- CSS -->
-  <link href="https://indrijunanda.github.io/RuangAdmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://indrijunanda.github.io/RuangAdmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://indrijunanda.github.io/RuangAdmin/css/ruang-admin.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/androidstudio.min.css" />
-
-  <!-- Highlight.js -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <title>Rest API - Adithya</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="ccs/fakeLoader.css">
+  <link rel="shortcut icon" href="https://i.ibb.co/8sTPwW2/IMG-20220402-105820.jpg">
+  <audio autoplay="autoplay" hidden="hidden" src="https://d.top4top.io/m_1947hbx4l1.mp3"></audio>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+ 
 </head>
 
+<style>
+  .bg-orange {
+      background-color: #c3cf0f;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffa426), to(#dda20a));
+  background-image: linear-gradient(180deg, #dd7009 10%, #ee7708 100%);
+  background-size: cover
+}
+
+.border-right-warning {
+  border-right: .25rem solid #ffeb3b !important
+}
+
+.border-top-warning {
+  border-top: .25rem solid #ffeb3b !important
+}
+
+.animated {
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #FF0000;
+	-webkit-animation: animatedBackground_c 2s infinite alternate;
+}
+@keyframes animatedBackground_c {
+	0% {-webkit-text-stroke-color: #ff8b00}
+	10% {-webkit-text-stroke-color: #e8ff00}
+	20% {-webkit-text-stroke-color: #5dff00}
+	30% {-webkit-text-stroke-color: #00ff2e}
+	40% {-webkit-text-stroke-color: #00ffb9}
+	50% {-webkit-text-stroke-color: #00b9ff}
+	60% {-webkit-text-stroke-color: #002eff}
+	70% {-webkit-text-stroke-color: #5d00ff}
+	80% {-webkit-text-stroke-color: #e800ff}
+	90% {-webkit-text-stroke-color: #ff008b}
+	100% {-webkit-text-stroke-color: #ff0000}
+}
+
+
+.img-gg {
+  width: 165px;
+  height: 165px; 
+ border: 3px solid #e3eaef}
+  
+  h7, .h7 {
+  font-size: 0.7rem; }
+  
+  .font-gg {
+  	font-size: 40px
+  }
+
+.rainbow {
+  background: linear-gradient(
+    to right, 
+    #A6CE37, #ECE71C, #0FC6E6, #F95D44, #816271, #9F1958, #081B6A, #59D7EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800px;
+  background-position: center 0%;
+  animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+  100% {
+    background-position: 8160px;
+  }
+}
+
+.bg-gray-dark {
+  background: #e3eaef; }
+  
+   
+
+
+
+
+.container1 {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h11 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+h21 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.play-area {
+	background-color: #e3eaef;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #0ff30f;
+}
+
+.win:hover {
+  background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+button1 {
+  outline: none;
+  border: 4px solid green;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button1:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.playerWin {
+  color: blue;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h11 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  h21 {
+    margin-top: 1em;
+    font-size: 1.3rem;
+  }
+}
+
+</style>
+
 <body id="page-top">
+	<div id="first"></div>
   <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav sidebar bg-gray-900 accordion bg-light" id="accordionSidebar" style="color: rgb(8, 247, 255);">
-      <!-- Sidebar Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-gray-900" style="color: rgb(7, 255, 201);">
-        <span style="color: rgb(255, 255, 255);">L</span>
+    	
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-gradient-dark" href="index.html">
+        <div class="sidebar-brand-icon">
+        	<img src="https://i.ibb.co/8sTPwW2/IMG-20220402-105820.jpg">
+        </div>
+        <div class="sidebar-brand-text mx-3 rainbow">Adithya API</div>
       </a>
-
-      <!-- Sidebar Divider -->
-      <hr class="sidebar-divider my-0" />
-
-      <!-- Documentation -->
+      <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link">
+        <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-code"></i>
-          <span>Documentation</span>
-        </a>
+          <span>Beranda</span></a>
       </li>
-
-      <!-- Features Section -->
-      <hr class="sidebar-divider" />
-      <div class="sidebar-heading">Features</div>
-
-      <!-- Downloader API -->
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        API Features
+      </div>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
-          <i class="fas fa-fw fa-arrow-down"></i>
-          <span>Downloader API</span>
+          <i class="fas fa-download"></i>
+          <span>Social Media API</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
-          <div class="bg-black py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Downloader Features</h6>
-            <a class="collapse-item" href="/downloader/youtube?link=https://www.youtube.com/watch?v=YLiRgeU7fQw">Youtube Downloader</a>
-            <a class="collapse-item" href="/downloader/play?query=anjay">Play</a>
-            <a class="collapse-item" href="/downloader/tiktok?link=https://vm.tiktok.com/ZSJcLPNpe/">Tiktok Downloader</a>
-            <a class="collapse-item" href="/downloader/tiktoknowm?link=https://vm.tiktok.com/ZSJcLPNpe">Tiktok Nowatermark</a>
-            <a class="collapse-item" href="/downloader/tiktokaudio?link=https://vm.tiktok.com/ZSJcLPNpe">Tiktok Audio</a>
-            <a class="collapse-item" href="/downloader/igdl?link=https://www.instagram.com/p/CTEDAEbpE4A/?utm_source=ig_web_copy_link">Instagram Downloader</a>
-            <a class="collapse-item" href="/downloader/igStory?username=kudettech_">Instagram Story Downloader</a>
-            <a class="collapse-item" href="/downloader/fbdl?link=https://www.facebook.com/AnnaTami.chan/videos/1259337391211843">Facebook Downloader</a>
-            <a class="collapse-item" href="/downloader/twitter?link=https://twitter.com/PassengersMovie/status/821025484150423557">Twitter Downloader</a>
-            <a class="collapse-item" href="/downloader/likeedl?link=https://likee.video/@vicky_marpaung/video/7006676628722311449">Likee Downloader</a>
-            <a class="collapse-item" href="/downloader/pindl?link=https://id.pinterest.com/pin/361906520063070744">Pinterest Downloader</a>
-            <a class="collapse-item" href="/downloader/pixiv?id=94216857&ext=.jpg">Pixiv Downloader</a>
-            <a class="collapse-item" href="/downloader/sfiledl?link=http://www.solidfiles.com/v/zdpVXjvRk8yaV">Solidfiles Downloadaer</a>
-            <a class="collapse-item" href="/downloader/mediafireDl?link=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file">Mediafire Downloader</a>
-            <a class="collapse-item" href="/downloader/scdl?link=https://soundcloud.com/user-943750457/jang-ganggu-shine-of-black">Soundcloud Downloader</a>
-            <a class="collapse-item" href="/downloader/stickerpack?link=https://getstickerpack.com/stickers/pentol-7">Stickerpack Downloader</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Search API -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="true" aria-controls="collapseSearch">
-          <i class="fas fa-fw fa-search"></i>
-          <span>Search API</span>
-        </a>
-        <!-- Search API Submenu -->
-        <div id="collapseSearch" class="collapse" aria-labelledby="headingSearch" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <!-- Search API Links -->
-            <!-- Add comments here if needed -->
+            <h6 class="collapse-header">Media Features</h6>
+            <a class="collapse-item" href="/api/download/fb?url=https://www.facebook.com/alanwalkermusic/videos/277641643524720&apikey=APIKEY">Facebook Downloader</a>
+            <a class="collapse-item" href="/api/download/tiktok?url=https://vt.tiktok.com/ZSJhvu1AE/&apikey=APIKEY">Tiktok Download</a>
+            <a class="collapse-item" href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr&apikey=APIKEY">Instagram Download</a>
+            <a class="collapse-item" href="/api/download/ytmp3?url=https://youtu.be/Nq5rzeJ5Ab4&apikey=APIKEY">Youtube Mp3 Download</a>
+            <a class="collapse-item" href="/api/download/ytmp4?url=https://youtu.be/Nq5rzeJ5Ab4&apikey=APIKEY">Youtube Mp4 Download</a>
+            <a class="collapse-item" href="/api/yt/playmp3?query=Monolog-pamungkas&apikey=APIKEY">Youtube Play Mp3</a>
+            <a class="collapse-item" href="/api/yt/playmp4?query=Monolog-pamungkas&apikey=APIKEY">Youtube Play Mp4</a>
+            <a class="collapse-item" href="/api/yt/search?query=Monolog-pamungkas&apikey=APIKEY">Youtube Searching</a>
+            <h6 class="collapse-header">Stalker Features</h6>
+            <a class="collapse-item" href="/api/stalk/ig?apikey=APIKEY&username=yogi.prwaa._">Instagram Stalker</a>
+            <a class="collapse-item" href="/api/stalk/tiktok?apikey=APIKEY&username=chikakiku">Tiktok Stalker</a>
+            <a class="collapse-item" href="/api/stalk/npm?apikey=APIKEY&query=zhirrr-api&hostname=zhirrr">Info NPM</a>
+            </div>
+        </div>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMusic" aria-expanded="true"
+          aria-controls="collapseMusic">
+          <i class="fas fa-music"></i>
+          <span>Music Api</span>
+        </a>
+        <div id="collapseMusic" class="collapse" aria-labelledby="headingMusic" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Music  API</h6>
+            <a class="collapse-item" href="/api/music/joox?apikey=APIKEY&query=monolog pamungkas">Joox Download</a>
+            <a class="collapse-item" href="/api/music/spotify?apikey=APIKEY&query=ignite">Spotify Search</a>
+      <a class="collapse-item" href="/api/music/liriklagu?query=sayang&apikey=APIKEY">Search Lirik Lagu</a>
+            <a class="collapse-item" href="/api/music/chordlagu?lagu=sayang&apikey=APIKEY">Search Chord Lagu</a>
+            </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIslamic" aria-expanded="true"
+          aria-controls="collapseIslamic">
+          <i class="fas fa-star-and-crescent"></i>
+          <span>Islamic Features</span>
+        </a>
+        <div id="collapseIslamic" class="collapse" aria-labelledby="headingIslamic" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Islamic  API</h6>
+            <a class="collapse-item" href="/api/muslim/hadits?kitab=bukhari&nomor=52&apikey=APIKEY">Hadits Shahih</a>
+            <a class="collapse-item" href="/api/muslim/quran?surah=1&ayat=2&apikey=APIKEY">Al Qur'an</a>
+            <a class="collapse-item" href="/api/muslim/tahlil?apikey=APIKEY">Doa Tahlil</a>
+            <a class="collapse-item" href="/api/muslim/wirid?apikey=APIKEY">Doa Wirid</a>
+            <a class="collapse-item" href="/api/muslim/asmaulhusna?apikey=APIKEY">Asmaul Husna</a>
+            <a class="collapse-item" href="/api/muslim/doaharian?apikey=APIKEY">Doa Harian</a>
+            <a class="collapse-item" href="/api/muslim/ayatkursi?apikey=APIKEY">Ayat Kursi</a>
+            <a class="collapse-item" href="/api/muslim/kisahnabi?nabi=muhammad&apikey=APIKEY">Kisah Nabi</a>
+            <a class="collapse-item" href="/api/muslim/niatshalat?apikey=APIKEY">Niat Shalat</a>
+            <a class="collapse-item" href="/api/muslim/bacaanshalat?apikey=APIKEY">Bacaan Shalat</a>
+            <a class="collapse-item" href="/api/muslim/jadwalshalat?kota=jakartautara&apikey=APIKEY">Jadwal Shalat</a>
           </div>
         </div>
       </li>
-
-      <!-- Anime API -->
-      <!-- Add more sections if needed -->
-
-      <!-- NSFW API -->
-      <!-- Add more sections if needed -->
-
-      <!-- Other API -->
-      <!-- Add more sections if needed -->
-
-      <!-- Divider -->
-      <hr class="sidebar-divider" />
-
-      <!-- Version -->
-      <div class="version" id="version-ruangadmin"></div>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWallpaper" aria-expanded="true"
+          aria-controls="collapseKodepos">
+          <i class="fas fa-image"></i>
+          <span>Random API</span>
+        </a>
+        <div id="collapseWallpaper" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Random Image API</h6>
+            <a class="collapse-item" href="api/search/image?apikey=APIKEY&query=chikaku">Search Image</a>
+             <a class="collapse-item" href="/api/maker/dadu?apikey=APIKEY">Random DADU</a>
+             <a class="collapse-item" href="/api/wallpaper/teknologi?apikey=APIKEY">Wallpaper Teknologi</a>
+            <a class="collapse-item" href="/api/wallpaper/programming?apikey=APIKEY">Wallpaper Programming</a>
+            <a class="collapse-item" href="/api/wallpaper/cyberspace?apikey=APIKEY">Wallpaper CyberSpace</a>
+            <a class="collapse-item" href="/api/wallpaper/muslim?apikey=APIKEY">Wallpaper Muslim</a>
+            <a class="collapse-item" href="/api/wallpaper/pegunungan?apikey=APIKEY">Wallpaper Mountain View</a>
+            <h6 class="collapse-header">Time Line API</h6>
+            <a class="collapse-item" href="/api/asupan?apikey=APIKEY">Random Asupan</a>
+             </div>
+            </div>
+            </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNSFW" aria-expanded="true"
+          aria-controls="collapseNSFW">
+          <i class="fas fa-fw fa-bullseye"></i>
+          <span>NSFW API</span>
+        </a>
+        <div id="collapseNSFW" class="collapse" aria-labelledby="headingNSFW" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">NSFW FITUR</h6>
+                    <a class="collapse-item" href="api/nsfw/ass?apikey=APIKEY">Ass</a>
+                    <a class="collapse-item" href="api/nsfw/ahegao?apikey=APIKEY">Ahegao</a>
+                    <a class="collapse-item" href="api/nsfw/bdsm?apikey=APIKEY">Bdsm</a>
+                    <a class="collapse-item" href="api/nsfw/blowjob?apikey=APIKEY">Blowjob</a>
+                    <a class="collapse-item" href="api/nsfw/cuckold?apikey=APIKEY">Cuckold</a>
+                    <a class="collapse-item" href="api/nsfw/cum?apikey=APIKEY">Cum</a>
+                    <a class="collapse-item" href="api/nsfw/ero?apikey=APIKEY">Ero</a>
+                    <a class="collapse-item" href="api/nsfw/femdom?apikey=APIKEY">Femdom</a>
+                    <a class="collapse-item" href="api/nsfw/foot?apikey=APIKEY">Foot</a>
+                    <a class="collapse-item" href="api/nsfw/gangbang?apikey=APIKEY">Gangbang</a>
+                    <a class="collapse-item" href="api/nsfw/glasses?apikey=APIKEY">Glasses</a>
+                    <a class="collapse-item" href="api/nsfw/hentai?apikey=APIKEY">Hentai</a>
+                    <a class="collapse-item" href="api/nsfw/hentaigif?apikey=APIKEY">Hentaigif</a>
+                    <a class="collapse-item" href="api/nsfw/jahy?apikey=APIKEY">Jahy</a>
+                    <a class="collapse-item" href="api/nsfw/masturbation?apikey=APIKEY">Masturbate</a>
+                    <a class="collapse-item" href="api/nsfw/nsfwNeko?apikey=APIKEY">NsfwNeko</a>
+                    <a class="collapse-item" href="api/nsfw/orgy?apikey=APIKEY">Orgy</a>
+                    <a class="collapse-item" href="api/nsfw/panties?apikey=APIKEY">Panties</a>
+                    <a class="collapse-item" href="api/nsfw/pussy?apikey=APIKEY">Pussy</a>
+                    <a class="collapse-item" href="api/nsfw/thighs?apikey=APIKEY">Anime Pussy</a>
+                    <a class="collapse-item" href="api/nsfw/yuri?apikey=APIKEY">Yuri</a>
+                    <a class="collapse-item" href="api/cersex?apikey=APIKEY">Cerita sex</a>
+                    <h6 class="collapse-header">SFW API</h6>
+                    <a class="collapse-item" href="api/sfw/waifu?apikey=APIKEY">Waifu</a>
+                    <a class="collapse-item" href="api/sfw/neko?apikey=APIKEY">Neko</a>
+                    <a class="collapse-item" href="api/sfw/shinobu?apikey=APIKEY">Shinobu</a>
+                    <a class="collapse-item" href="api/sfw/megumin?apikey=APIKEY">Megumin</a>
+                    <a class="collapse-item" href="api/sfw/bully?apikey=APIKEY">Bully</a>
+                    <a class="collapse-item" href="api/sfw/cuddle?apikey=APIKEY">Cuddle</a>
+                    <a class="collapse-item" href="api/sfw/cry?apikey=APIKEY">Cry</a>
+                    <a class="collapse-item" href="api/sfw/kiss?apikey=APIKEY">Kiss</a>
+                    <a class="collapse-item" href="api/sfw/hug?apikey=APIKEY">Hug</a>
+                    <a class="collapse-item" href="api/sfw/awoo?apikey=APIKEY">Awoo</a>
+                    <a class="collapse-item" href="api/sfw/lick?apikey=APIKEY">Lick</a>
+          </div>
+        </div>
+            </li>
+<li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker" aria-expanded="true"
+          aria-controls="collapseMaker">
+          <i class="fas fa-fw fa-images"></i>
+          <span>Image Maker API</span>
+        </a>
+        <div id="collapseMaker" class="collapse" aria-labelledby="headingText" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="/api/maker/nulis?apikey=APIKEY&text=Awokwokwok Mager yaa:v">Nulis Buku</a>
+            <a class="collapse-item" href="/api/maker/attp?apikey=APIKEY&text=yogipw">Animation Text To Picture</a>
+            <a class="collapse-item" href="/api/maker/ttp?apikey=APIKEY&text=yogipw">Text To Picture</a>
+            <a class="collapse-item" href="/api/maker/ttp2?apikey=APIKEY&text=yogipw">Text To Picture 2</a>
+            <a class="collapse-item" href="/api/maker/emoji2png?apikey=APIKEY&text=😎">Emoji To Png</a>
+            <h6 class="collapse-header">Image Edit API</h6>
+            <a class="collapse-item" href="/api/maker/skatch?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Skatch Effect</a>
+            <a class="collapse-item" href="/api/imgedit/gay?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Gay Effect</a>
+            <a class="collapse-item" href="/api/imgedit/wasted?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Wasted Effect</a>
+            <a class="collapse-item" href="/api/imgedit/triger?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Triggered Effect</a>
+            <a class="collapse-item" href="/api/imgedit/greyscale?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">GreyScale Effect</a>
+            <a class="collapse-item" href="/api/imgedit/invert?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Invert Effect</a>
+            <a class="collapse-item" href="/api/imgedit/brightness?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Brightness Effect</a>
+            <a class="collapse-item" href="/api/imgedit/glass?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Glass Effect</a>
+            <a class="collapse-item" href="/api/imgedit/sepia?apikey=APIKEY&url=https://i.ibb.co/wJv5Pgp/logolu.png">Sepia Effect</a>
+            <a class="collapse-item" href="/api/imgedit/enhance?apikey=APIKEY&img=https://i.ibb.co/wJv5Pgp/logolu.png">Bikin HD gambar</a>
+            </div>
+            </div>
+            </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePhotooxy" aria-expanded="true"
+          aria-controls="collapsePhotooxy">
+          <i class="fas fa-fw fa-images"></i>
+          <span>Photooxy API</span>
+        </a>
+        <div id="collapsePhotooxy" class="collapse" aria-labelledby="headingText" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Photooxy API</h6>
+            <a class="collapse-item" href="/api/photooxy/shadow?apikey=APIKEY&text=yogipw">Shadow Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/romantic?apikey=APIKEY&text=yogipw">Romantic Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/smoke?apikey=APIKEY&text=yogipw">Smoke text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/burn-paper?apikey=APIKEY&text=yogipw">Burn-paper Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/naruto?apikey=APIKEY&text=yogipw">Naruto Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/romantic?apikey=APIKEY&text=yogipw">Romantic Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/love-message?apikey=APIKEY&text=yogipw">Love-Message Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/message-under-grass?apikey=APIKEY&text=yogipw">Message Under Grass</a>
+            <a class="collapse-item" href="/api/photooxy/glitch?apikey=APIKEY&text=yogipw&text2=Rest APIs">Glitch Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/double-heart?apikey=APIKEY&text=yogipw">Double Heart</a>
+            <a class="collapse-item" href="/api/photooxy/coffe-cup?apikey=APIKEY&text=yogipw">Coffe-cup Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/love-text?apikey=APIKEY&text=yogipw">Love-Text Effect</a>
+            <a class="collapse-item" href="/api/photooxy/butterfly?apikey=APIKEY&text=yogipw">Butterfly Text Effect</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTextPro2" aria-expanded="true" aria-controls="collapseForm">
+                    <i class="fa fa-fw fa-font"></i>
+                    <span>Vokal Generator</span>
+                </a>
+                <div id="collapseTextPro2" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/api/vokal/halah?kata=Ampun Bang Jago&apikey=APIKEY">Halah Generator</a>
+                        <a class="collapse-item" href="/api/vokal/hilih?kata=Ampun Bang Jago&apikey=APIKEY">Hilih Generator</a>
+                        <a class="collapse-item" href="/api/vokal/huluh?kata=Ampun Bang Jago&apikey=APIKEY">Huluh Generator</a>
+                        <a class="collapse-item" href="/api/vokal/heleh?kata=Ampun Bang Jago&apikey=APIKEY">Heleh Generator</a>
+                        <a class="collapse-item" href="/api/vokal/holoh?kata=Ampun Bang Jago&apikey=APIKEY">Holoh Generator</a>
+                        
+                    </div>
+                </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandom"
+          aria-expanded="true" aria-controls="collapseRandom">
+          <i class="fas fa-random"></i>
+          <span>Random API</span>
+        </a>
+        <div id="collapseRandom" class="collapse" aria-labelledby="headingGithub" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Random API</h6>
+            <a class="collapse-item" href="/api/random/quotes?apikey=APIKEY">Quotes</a>
+            <a class="collapse-item" href="/api/random/quotes/muslim?apikey=APIKEY">Quotes Islami</a>
+            <a class="collapse-item" href="/api/random/quotes/kanye?apikey=APIKEY">Quotes Kanye</a>
+            <a class="collapse-item" href="/api/random/asmaulhusna?apikey=APIKEY">Asmaul Husna</a>
+            <a class="collapse-item" href="/api/random/meme?apikey=APIKEY">Meme</a>
+            <a class="collapse-item" href="/api/random/wallpaper?apikey=APIKEY">Wallpaper</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true"
+          aria-controls="collapseAnime">
+          <i class="fas fa-cat"></i>
+          <span>Anime/Manga API</span>
+        </a>
+        <div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Anime/Manga Features</h6>
+            <a class="collapse-item" href="/api/anime/kusonime?search=naruto&apikey=APIKEY">Kusonime</a>
+            <a class="collapse-item" href="/api/anime/kusonime2?search=naruto&apikey=APIKEY">Kusonime 2</a>
+            <a class="collapse-item" href="/api/anime/dewabatch?search=naruto&apikey=APIKEY">Dewabatch</a>
+            <a class="collapse-item" href="/api/anime/manga?search=kimetsu no yaiba&apikey=APIKEY">Manga</a>
+            <a class="collapse-item" href="/api/anime/loli?apikey=APIKEY">Random LoLi</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGames" aria-expanded="true" aria-controls="collapseForm">
+          <i class="fas fa-laugh-beam"></i>
+           <span>Fun API</span>
+       </a>
+      <div id="collapseGames" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+       <div class="py-2 collapse-inner rounded">
+         <h6 class="collapse-header">Fun Features</h6>
+            <a class="collapse-item" href="/api/kuis/caklontong?apikey=APIKEY">Cak Lontong</a>
+            <a class="collapse-item" href="/api/kuis/tebakgambar?apikey=APIKEY">Tebak Gambar</a>
+             <a class="collapse-item" href="/api/hilih?kata=aku kan ganteng banget&apikey=APIKEY">Kata Hilih</a>
+         </div>
+         </div>
+        </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseItem" aria-expanded="true" aria-controls="collapseForm">
+          <i class="fas fa-wrench"></i>
+           <span>Tools API</span>
+       </a>
+      <div id="collapseItem" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+       <div class="py-2 collapse-inner rounded">
+         <h6 class="collapse-header">Tools Features</h6>
+            <a class="collapse-item" href="/api/web2plain-text?apikey=APIKEY&url=https://yogipurwa-api.herokuapp.com">Web To Plain-Text</a>
+            <a class="collapse-item" href="/api/tools/wpuser?apikey=APIKEY&url=http://gdjms.co.za/">Wordpress User</a>
+            <a class="collapse-item" href="/api/short/tinyurl?url=google.com&apikey=APIKEY">Shortlink Tinyurl</a>
+            <a class="collapse-item" href="/api/translate?kata=hi&apikey=APIKEY">Translate</a>
+            <a class="collapse-item" href="/api/fakedata?country=en&apikey=APIKEY">Fake Data</a>
+         <h6 class="collapse-header">Encrypt Tools</h6>
+            <a class="collapse-item" href="/api/base?apikey=APIKEY&type=base64&encode=yogipwApis">Base64 Encrypt</a>
+            <a class="collapse-item" href="/api/base?apikey=APIKEY&type=base32&encode=yogipwApis">Base32 Encrypt</a>
+         <h6 class="collapse-header">Decrypt Tools</h6>
+            <a class="collapse-item" href="/api/base?apikey=APIKEY&type=base64&decode=yogipwApis">Base64 Decrypt</a>
+            <a class="collapse-item" href="/api/base?apikey=APIKEY&type=base32&decode=yogipwApis">Base32 Decrypt</a>
+         </div>
+         </div>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="true"
+          aria-controls="collapseother">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Information API</span>
+        </a>
+        <div id="collapseInfo" class="collapse" aria-labelledby="headingother" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Information Menu</h6>
+            <a class="collapse-item" href="/api/info/gempa?apikey=APIKEY">Info Gempa</a>
+            <a class="collapse-item" href="/api/info/cuaca?apikey=APIKEY&kota=banyuwangi">Info Cuaca</a>
+            <a class="collapse-item" href="/api/info/covidindo?apikey=APIKEY">Covid Indo</a>
+            <a class="collapse-item" href="/api/info/covidworld?apikey=APIKEY">Covid World</a>
+            <a class="collapse-item" href="/api/info/wikipedia?search=jembatan&apikey=APIKEY">Wikipedia</a>
+            <a class="collapse-item" href="/api/info/drakorasia?search=tale&apikey=APIKEY">Drakor Asia</a>
+            <a class="collapse-item" href="/api/info/kbbi?kata=pohon&apikey=APIKEY">KBBI</a>
+            <a class="collapse-item" href="/api/info/kodepos?kota=jakarta&apikey=APIKEY">Kode Pos</a>
+          </div>
+        </div>
+      </li>
+      <hr class="sidebar-divider">
+      	<div class="sidebar-heading">
+        My Project
+      </div>
+      <li class="nav-item">
+      <a class="nav-link collapsed" href="https://api.whatsapp.com/send?phone=+62882248593506&text=@menu" data-toggle="" data-target="#project"
+          aria-expanded="true" aria-controls="project">
+          <i class="fab fa-whatsapp"></i>
+          <span>Bot WhatsApp</span>
+        </a>
+        </li>
+     <li class="nav-item">
+      <a class="nav-link collapsed" href="https://kagurachan.herokuapp.com/api/game" data-toggle="" data-target="#project"
+          aria-expanded="true" aria-controls="project">
+          <i class="fas fa-fw fa-gamepad"></i>
+          <span>Games Website</span>
+        </a>
+        </li>
+      <li class="nav-item">
+      <a class="nav-link collapsed" href="https://kagurachan.herokuapp.com/ngetes" data-toggle="" data-target="#project"
+          aria-expanded="true" aria-controls="project">
+          <i class="fab fa-website"></i>
+          <span>Ngetes</span>
+        </a>
+        </li>
+      <hr class="sidebar-divider">
+      <div class="version">Version 3.0</div>
     </ul>
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
+    <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
-        <!-- Top Navbar -->
-        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top bg-gray-900">
-          <!-- Sidebar Toggle Button -->
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top bg-gradient-dark">
           <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
-
-          <!-- User Dropdown -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-              <!-- User Dropdown Content -->
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-success badge-counter">3 </span>
+              </a>
+                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header bg-dark">
+                  ALERTS CENTER
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-dark">
+                      <i class="fas fa-info-circle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">April 30, 2021</div>
+                    <span class="font-weight-bold">Update Tampilan</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-dark">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">March 16, 2021</div>
+                    <span class="font-weight-bold">Need apikey? Mainin tic tac toe:v</span>
+                  </div>
+                 </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-dark">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">May 12, 2021</div>
+                    <span class="font-weight-bold">Belum selesai sepenuhnya :v</span>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="https://i.ibb.co/qn9wdKk/252dfa1ec7fb.jpg" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small">Adithya</span>
+              </a>
+              </div>
             </li>
           </ul>
         </nav>
-        <!-- End of Top Navbar -->
+        <!-- Topbar -->
 
-        <!-- Main Content Container -->
-        <div class="container-fluid" id="container-wrapper">
-          <!-- Alert Demo -->
-          <div id="demo" class="alert alert-dark alert-dismissible" role="alert">
-            <!-- Browser Info -->
-            <!-- JavaScript for displaying browser info -->
+         
+
+        <!-- Container Fluid-->
+          <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
           </div>
-
-          <!-- Content Row -->
-          <div class="row">
-            <!-- Content Column -->
-            <div class="col-xl-12 col-lg-12 col-md-12">
-              <!-- Card -->
-              <div class="card">
-                <!-- Card Header -->
-                <div class="card-header">
-                  <!-- Card Title -->
-                  <h4 class="card-title">Made with ❤️ by <a href="https://github.com/Arya-was" target="_blank">Arya</a></h4>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body text-sm-left font-weight-bold">
-                  <!-- Card Content -->
-                  Jangan di Bully mastah, Saya cuma gabut bikin Api monggo di pakai btw source code nya di <a href="https://github.com/Arya-was/simple-api" target="_blank">Sini</a> yak
-                </div>
-              </div>
-              <!-- End of Card -->
+          <div class="col-lg-6">
+       <div class="card mb-4">
+        <div class="card-header py-3">
+         <div class="card-body">
+          <div class="row align-item-center">
+           <div id="demo" class="alert alert-dark alert-dismissible" role="alert">
+            <div id="Statistic"></div>
+             <span id="tgl">00</span> - <span id="bln">00</span> - <span id="thn"></span>
             </div>
-            <!-- End of Content Column -->
+           </div>
           </div>
-          <!-- End of Content Row -->
-
-          <!-- Footer -->
-          <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-              <div class="copyright text-center my-auto">
-                <!-- Copyright Info -->
-                <span>copyright &copy;
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  <b><a href="https://github.com/Arya-was" target="_blank">Arya</a></b>
-                </span>
-              </div>
-            </div>
-          </footer>
-          <!-- End of Footer -->
+         </div> 
         </div>
-        <!-- End of Main Content Container -->
-      </div>
-    </div>
-    <!-- End of Content Wrapper -->
+       </div>
 
-    <!-- Scroll to
+          <div class="row mb-3">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Road To Idul Fitri</div>
+                      <p class="h5 mb-0 font-weight-bold rainbow" id="IdulFitri"></p>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-star fa-2x text-danger"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            	<div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Ip Andress</div>
+                      <p class="h5 mb-0 font-weight-bold rainbow" id="ipanda"></p>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rss fa-2x text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            	<div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Visitor</div>
+                      <p class="h5 mb-0 font-weight-bold rainbow" id="visitorJarAPI"></p>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-eye fa-2x text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Earnings (Annual) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Date</div>
+                      <p class="h5 mb-0 font-weight-bold rainbow" id="JamSekarang"></p>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clock fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          <!--Row-->
+<form action="/api/cekapikey">
+      <div class="col-lg-6">
+       <div class="card mb-4">
+        <div class="card-header py-3">
+         <div class="card-body">
+          <h6 class="animated">Check Your Apikey</h6>
+           <input type="text" class="form-control" placeholder="Your apikey" name="apikey" required="">
+            <button class="btn btn-danger btn-icon-split">
+             <span class="icon text-white-50">
+              <i class="fas fa-check"></i>
+             </span>
+             <span class="text">Check</span>
+            </button>
+         </div>
+        </div>
+       </div>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <p>Suka Dengan API Nya ? Boleh Dong, Follow Github Gw: <a href="https://github.com/Adithyaganteng"
+                  class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
+            </div>
+          </div>
+
+        </div>
+
+          <!--Row-->
+              <div class="row">
+              <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                	<h4 class="card-title">Contact me</h4>
+                <hr>
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Adithya</div>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                        <span>Berjalanlah Tanpa Menjatuhkan Orang Lain</span>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuOutlineButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton1">
+                          <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=+6285763871819&text=Assalamualaikum+Gan">WhatsApp</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="https://www.instagram.com/adithyanababan">Instagram</a>
+                        </div>
+                      </div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title text-center">Tic Tac Toe</h4>
+                    <h6 class="card-title text-center">Menang kan Untuk Mendapatkan Apikey</h6>
+                    <hr>
+          <div class="container1">
+        <div class="play-area">
+        </div>
+        <h21 class="text-center" id="winner"></h21>
+        <button1 onclick="reset_board()">ULANG</button1>
+    </div>
+    </div>
+    </div>
+    </div>
+            
+        <!---Container Fluid-->
+      </div>
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; 2021 - Developed By
+              <b><a href="https://www.instagram.com/adithyanababan" target="_blank">Adithya</a></b>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/ruang-admin.js"></script>
+  <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/VRQDOFaFqWk?rel=0&autoplay:1" frameborder="0"  allowfullscreen></iframe>
+  <embed src="./sound/losretros.mp3" type="audio/mpeg" autostart="true" loop="true" height="0" width="0">
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>  
+  <script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+var countDownDate = new Date("May 12, 2021 23:00:00").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("IdulFitri").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("IdulFitri").innerHTML = "BERAKHIR";
+  }
+}, 1000);
+</script>
+<script>
+	window.setTimeout("waktu()", 1000);
+ 
+	function waktu() {
+		var d = new Date();
+  const jam = d.getHours();
+  const menit = d.getMinutes();
+  const detik = d.getSeconds();
+		setTimeout("waktu()", 1000);
+		document.getElementById("JamSekarang").innerHTML = jam +":"+ menit +":"+ detik 
+		
+		
+	}
+</script>
+<script>
+	const player = "O";
+const computer = "X";
+
+let board_full = false;
+let play_board = ["", "", "", "", "", "", "", "", ""];
+
+const board_container = document.querySelector(".play-area");
+
+const winner_statement = document.getElementById("winner");
+
+check_board_complete = () => {
+  let flag = true;
+  play_board.forEach(element => {
+    if (element != player && element != computer) {
+      flag = false;
+    }
+  });
+  board_full = flag;
+};
+
+
+const check_line = (a, b, c) => {
+  return (
+    play_board[a] == play_board[b] &&
+    play_board[b] == play_board[c] &&
+    (play_board[a] == player || play_board[a] == computer)
+  );
+};
+
+const check_match = () => {
+  for (i = 0; i < 9; i += 3) {
+    if (check_line(i, i + 1, i + 2)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 1}`).classList.add("win");
+      document.querySelector(`#block_${i + 2}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    if (check_line(i, i + 3, i + 6)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 3}`).classList.add("win");
+      document.querySelector(`#block_${i + 6}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  if (check_line(0, 4, 8)) {
+    document.querySelector("#block_0").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_8").classList.add("win");
+    return play_board[0];
+  }
+  if (check_line(2, 4, 6)) {
+    document.querySelector("#block_2").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_6").classList.add("win");
+    return play_board[2];
+  }
+  return "";
+};
+
+const check_for_winner = () => {
+  let res = check_match()
+  if (res == player) {
+    winner.innerText = "Lu Menang Apikey Nya : Adithya";
+    winner.classList.add("playerWin");
+    board_full = true
+  } else if (res == computer) {
+    winner.innerText = "Awokawok Kalah Ama Komputer:v";
+    winner.classList.add("computerWin");
+    board_full = true
+  } else if (board_full) {
+    winner.innerText = "Draw!";
+    winner.classList.add("draw");
+  }
+};
+
+
+const render_board = () => {
+  board_container.innerHTML = ""
+  play_board.forEach((e, i) => {
+    board_container.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`
+    if (e == player || e == computer) {
+      document.querySelector(`#block_${i}`).classList.add("occupied");
+    }
+  });
+};
+
+const game_loop = () => {
+  render_board();
+  check_board_complete();
+  check_for_winner();
+}
+
+const addPlayerMove = e => {
+  if (!board_full && play_board[e] == "") {
+    play_board[e] = player;
+    game_loop();
+    addComputerMove();
+  }
+};
+
+const addComputerMove = () => {
+  if (!board_full) {
+    do {
+      selected = Math.floor(Math.random() * 9);
+    } while (play_board[selected] != "");
+    play_board[selected] = computer;
+    game_loop();
+  }
+};
+
+const reset_board = () => {
+  play_board = ["", "", "", "", "", "", "", "", ""];
+  board_full = false;
+  winner.classList.remove("playerWin");
+  winner.classList.remove("computerWin");
+  winner.classList.remove("draw");
+  winner.innerText = "";
+  render_board();
+};
+
+//initial render
+render_board();
+</script>
+  
+  <script type="text/javascript">
+	$.getJSON("https://api.countapi.xyz/hit/kagurachan.herokuapp/visits", function(data) {
+    	$("#visitorJarAPI").text(data.value);
+	});
+</script>
+<script>
+	window.setTimeout("getip()",1000);function getip(){var xhr=new XMLHttpRequest();var url='https://api.xteam.xyz/cekip';xhr.onloadend=function(){data=JSON.parse(this.responseText);document.getElementById("ipanda").textContent=data.response
+document.getElementById("userhit").textContent=data.userhit};xhr.open("GET",url,true);xhr.send();}
+</script>
+	<script>
+  swal("Halo Stah", "Masih pemula(", "warning");
+</script>
+
+        
+</body>
+
+</html>
